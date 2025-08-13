@@ -3,8 +3,30 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class ProductEntry extends Model
 {
-    //
+    use hasFactory;
+    protected $perPage = 10;
+
+    protected $fillable = [
+        'product_id',
+        'quantity',
+        'entry_date'
+    ];
+
+    public function product()
+    {
+        return $this->belongsTo(Producto::class);
+    }
+    public function inventory()
+    {
+        return $this->belongsTo(Teacher::class);
+    }
+
+    public function subject()
+    {
+        return $this->belongsTo(Subject::class);
+    }
 }

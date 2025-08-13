@@ -12,7 +12,11 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('inventories', function (Blueprint $table) {
-            $table->id();
+            $table->increment('id');
+            $table->datetime('Entry_date');
+            $table->datetime('Departure_date');
+            $table->datetime('Expiration_date')->nulleable();
+            $table->string('Amount', 10);
             $table->timestamps();
         });
     }
