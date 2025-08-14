@@ -23,7 +23,27 @@ class InventaryRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'entry_day' => 'required | date',
+            'departure_date' => 'required |date',
+            'expiration_date' => 'required |date',
+            'current_quantity' => 'required|string|min:1|max:3',
+
+        ];
+    }
+    public function messages()
+    {
+        return[
+
+            'entry_day.required' => 'el dia de entrada al inventario es requerido.',
+
+            'departure_date.required' => 'la fecha de salida del inventario es requerida.',
+
+            'expiration_date.required' => 'la fecha de expiracion es requerida.',
+
+            'current_quantity.required' => 'la cantidad actual es requerida.',
+            'current_quantity.string' => 'la cantidad actual debe contener solo caracteres.',
+            'current_quantity.min' => 'la cantidad del stock debe contener minimo 1 caracter.',
+            'current_quantity.max' => 'la cantidad del stock no puede exceder el maximo de 3 caracteres.',
         ];
     }
 }

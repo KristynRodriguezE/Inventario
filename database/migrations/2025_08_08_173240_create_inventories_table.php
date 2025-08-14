@@ -16,7 +16,11 @@ return new class extends Migration
             $table->datetime('Entry_date');
             $table->datetime('Departure_date');
             $table->datetime('Expiration_date')->nulleable();
-            $table->string('Amount', 10);
+            $table->string('current_quantity', 10);
+
+            $table->integer('product_id')->unsigned();
+            $table->foreign('product_id')->references('id')->on('products')->onDelete('cascade')->onUpdate('cascade');
+
             $table->timestamps();
         });
     }

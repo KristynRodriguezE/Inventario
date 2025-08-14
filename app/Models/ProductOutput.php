@@ -15,4 +15,14 @@ class ProductOutput extends Model
         'quantity',
         'output_date'
     ];
+
+    public function product()
+    {
+        return $this->belongsTo(Producto::class);
+    }
+    public function inventory()
+    {
+        return $this->belongsTo(Inventario::class);
+    }
+
 }

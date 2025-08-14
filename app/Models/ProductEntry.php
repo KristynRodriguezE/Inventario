@@ -22,11 +22,11 @@ class ProductEntry extends Model
     }
     public function inventory()
     {
-        return $this->belongsTo(Teacher::class);
+        return $this->belongsTo(Inventario::class);
     }
 
-    public function subject()
+    public function supplier()
     {
-        return $this->belongsTo(Subject::class);
+        return $this->belongsTo(Supplier::class);
     }
 }

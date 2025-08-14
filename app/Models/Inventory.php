@@ -11,9 +11,23 @@ class Inventory extends Model
     protected $perPage = 10;
 
     protected $fillable = [
-        'Entry_date',
-        'Departure_date',
-        'Expiration_date',
-        'Amount'
+        'entry_date',
+        'departure_date',
+        'expiration_date',
+        'amount'
     ];
+
+    public function productentry()
+    {
+        return $this->hasmany(ProductEntry::class);
+    }
+
+    public function inventory()
+    {
+        return $this->hasmany(Inventory::class);
+    }
+    public function productoutput()
+    {
+        return $this->hasmany(ProductOutput::class);
+    }
 }

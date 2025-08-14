@@ -16,6 +16,13 @@ return new class extends Migration
             $table->string('Quanity', 10);
             $table->datetime('Date');
             $table->string('Input_type', 40);
+
+            $table->integer('inventory_id')->unsigned();
+            $table->foreign('inventory_id')->references('id')->on('inventories')->onDelete('cascade')->onUpdate('cascade');
+
+            $table->integer('product_id')->unsigned();
+            $table->foreign('product_id')->references('id')->on('products')->onDelete('cascade')->onUpdate('cascade');
+            
             $table->timestamps();
         });
     }

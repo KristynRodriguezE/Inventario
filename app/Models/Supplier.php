@@ -16,4 +16,9 @@ class Supplier extends Model
         'address',
         'email'
     ];
+
+    public function productentry()
+    {
+        return $this->hasmany(ProductEntry::class);
+    }
 }

@@ -21,6 +21,13 @@ return new class extends Migration
             $table->string('Type', 40);
             $table->string('Unit_measurement', 40);
             $table->string('Expiration_date', 40)->nullable();
+
+            $table->integer('mark_id')->unsigned();
+            $table->foreign('mark_id')->references('id')->on('marks')->onDelete('cascade')->onUpdate('cascade');
+
+            $table->integer('category_id')->unsigned();
+            $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade')->onUpdate('cascade');
+
             $table->timestamps();
         });
     }

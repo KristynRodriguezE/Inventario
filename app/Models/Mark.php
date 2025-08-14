@@ -13,4 +13,9 @@ class Mark extends Model
     protected $fillable = [
         'Mark'
     ];
+
+    public function product()
+    {
+        return $this->hasmany(Product::class);
+    }
 }

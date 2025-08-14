@@ -11,18 +11,33 @@ class Product extends Model
     protected $perPage = 10;
 
     protected $fillable = [
-        'Name',
-        'Price',
-        'Status',
-        'Code',
-        'Current_Quantity',
-        'Type',
-        'Unit_measurement',
-        'Expiration_date'
+        'name',
+        'price',
+        'status',
+        'code',
+        'current_Quantity',
+        'type',
+        'unit_measurement',
+        'expiration_date'
     ];
 
-    public function product()
+    public function mark()
     {
-        return $this->hasmany(Producto::class);
+        return $this->belongsTo(Mark::class);
+    }
+
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
+    }
+
+    public function productentry()
+    {
+        return $this->hasmany(ProductEntry::class);
+    }
+
+    public function productoutput()
+    {
+        return $this->hasmany(ProductOutput::class);
     }
 }
