@@ -60,8 +60,6 @@ class ProductRequest extends FormRequest
             'unit_measurement.required' => 'La unidad de medida del producto es requerida.',
             'unit_measurement.string' => 'La unidad de medida del producto debe contener solo caracteres.',
             'unit_measurement.max' => 'La unidad de medida del producto no puede exceder el maximo de 40 caracteres.',
-
-
         ];
     }
 }
