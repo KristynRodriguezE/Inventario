@@ -11,9 +11,10 @@ class Supplier extends Model
     protected $perPage = 10;
 
     protected $fillable = [
-        'name',
-        'phone',
-        'address',
+        'Representative_name',
+        'company_name',
+        'Phone_number',
+        'Physical_Address',
         'email'
     ];
 

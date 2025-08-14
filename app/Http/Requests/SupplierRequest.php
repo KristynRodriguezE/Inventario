@@ -27,8 +27,7 @@ class SupplierRequest extends FormRequest
             'company_name' => 'required|string|min:5|max:255',
             'phone_number' => ['required|string|min:5|max:15', Rule::unique('suppliers')->ignore($this->supplier)],
             'email' => ['required', 'string', 'min:5', 'max:20',Rule::unique('students')->ignore($this->student)],
-            'duration' => 'required|string|min:5|max:45',
-            'specialty' => 'required|string|min:5|max:45',
+            'Physical_Address' => 'required|string|min:5|max:255',
         ];
     }
 
@@ -55,15 +54,10 @@ class SupplierRequest extends FormRequest
             'email.min' => 'El correo electronico debe contener minimo 5 caracteres.',
             'email.max' => 'El correo electronico no puede exceder el maximo de 20 caracteres.',
 
-            'duration.required' => 'La duracion es requerida.',
-            'duration.string' => 'La duracion debe contener solo caracteres.',
-            'duration.min' => 'La duracion debe contener minimo 5 caracteres.',
-            'duration.max' => 'La duracion no puede exceder el maximo de 45 caracteres.',
-
-            'specialty.required' => 'La especialidad es requerida.',
-            'specialty.string' => 'La especialidad debe contener solo caracteres.',
-            'specialty.min' => 'La especialidad debe contener minimo 5 caracteres.',
-            'specialty.max' => 'La especialidad no puede exceder el maximo de 45 caracteres.',
+            'Physical_Address.required' => 'La direccion es requerida.',
+            'Physical_Address.string' => 'La direccion debe contener solo caracteres.',
+            'Physical_Address.min' => 'La direccion debe contener minimo 5 caracteres.',
+            'Physical_Address.max' => 'La direccion no puede exceder el maximo de 45 caracteres.',
         ];
     }
 }
