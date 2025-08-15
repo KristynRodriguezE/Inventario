@@ -7,7 +7,7 @@ use App\Models\Category;
 use App\Http\Requests\CategoryRequest;
 
 class Categorycontroller extends Controller
-{ 
+{
     /**
      * Display a listing of the resource.
      */
