@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('inventories', function (Blueprint $table) {
-            $table->increment('id');
+            $table->increments('id');
             $table->datetime('Entry_date');
             $table->datetime('Departure_date');
             $table->datetime('Expiration_date')->nulleable();
