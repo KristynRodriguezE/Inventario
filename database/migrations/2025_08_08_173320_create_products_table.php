@@ -13,14 +13,13 @@ return new class extends Migration
     {
         Schema::create('products', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('Name',255);
-            $table->float('Price');
-            $table->string('Status', 40);
-            $table->string('Code', 40)->unique();
-            $table->string('Current_Quantity', 40);
-            $table->string('Type', 40);
-            $table->string('Unit_measurement', 40);
-            $table->string('Expiration_date', 40)->nullable();
+            $table->string('name',255);
+            $table->decimal('price');
+            $table->string('code', 40)->unique();
+            $table->string('current_Quantity', 40);
+            $table->string('type', 40);
+            $table->string('unit_measurement', 40);
+            $table->string('expiration_date', 40)->nullable();
 
             $table->integer('mark_id')->unsigned();
             $table->foreign('mark_id')->references('id')->on('marks')->onDelete('cascade')->onUpdate('cascade');

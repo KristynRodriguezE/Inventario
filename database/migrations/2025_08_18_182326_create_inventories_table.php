@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('inventories', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('status', 40);
             $table->datetime('Entry_date');
             $table->datetime('Departure_date');
             $table->datetime('Expiration_date')->nullable();
