@@ -12,22 +12,15 @@ class Inventory extends Model
 
     protected $fillable = [
         'entry_date',
-        'departure_date',
-        'expiration_date',
-        'amount'
+        'current_stock',
+        'minimum_stock',
+        'expiration_date' => null,
+        'last_update',
+        'product_id'
+
     ];
-
-    public function productentry()
+    public function product()
     {
-        return $this->hasmany(ProductEntry::class);
-    }
-
-    public function inventory()
-    {
-        return $this->hasmany(Inventory::class);
-    }
-    public function productoutput()
-    {
-        return $this->hasmany(ProductOutput::class);
+        return $this->hasmany(Product::class);
     }
 }

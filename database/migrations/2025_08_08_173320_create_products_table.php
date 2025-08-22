@@ -14,7 +14,8 @@ return new class extends Migration
         Schema::create('products', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name',255);
-            $table->decimal('price');
+            $table->decimal('purchase_price', 10, 2);
+            $table->decimal('sales_price', 10, 2);
             $table->string('code', 40)->unique();
             $table->string('current_Quantity', 40);
             $table->string('type', 40);
@@ -26,6 +27,9 @@ return new class extends Migration
 
             $table->integer('category_id')->unsigned();
             $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade')->onUpdate('cascade');
+
+            $table->integer('supplier_id')->unsigned();
+            $table->foreign('supplier_id')->references('id')->on('suppliers')->onDelete('cascade')->onUpdate('cascade');
 
             $table->timestamps();
         });

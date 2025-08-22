@@ -11,18 +11,18 @@ class ProductOutput extends Model
     protected $perPage = 10;
 
     protected $fillable = [
-        'product_id',
+        'unit_price',
         'quantity',
-        'output_date'
+        'date',
+        'description' => null,
+        'input_type',
+        'product_id',
+        'inventory_id'
     ];
 
     public function product()
     {
         return $this->belongsTo(Producto::class);
-    }
-    public function inventory()
-    {
-        return $this->belongsTo(Inventario::class);
     }
 
 }

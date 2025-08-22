@@ -13,9 +13,11 @@ return new class extends Migration
     {
         Schema::create('product_entries', function (Blueprint $table) {
             $table->increments('id');
+            $table->decimal('unit_price', 10, 2);
             $table->string('Quanity', 10);
             $table->datetime('Date');
-            $table->string('Input_type', 40);
+            $table->text('description')->nullable();
+            $table->string('input_type', 40);
 
             $table->integer('inventory_id')->unsigned();
             $table->foreign('inventory_id')->references('id')->on('inventories')->onDelete('cascade')->onUpdate('cascade');

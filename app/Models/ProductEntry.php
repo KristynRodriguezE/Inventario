@@ -11,18 +11,19 @@ class ProductEntry extends Model
     protected $perPage = 10;
 
     protected $fillable = [
-        'product_id',
+        'unit_price',
         'quantity',
-        'entry_date'
+        'date',
+        'entry_date',
+        'description' => null,
+        'input_type',
+        'product_id',
+        'supplier_id'
     ];
 
     public function product()
     {
         return $this->belongsTo(Producto::class);
-    }
-    public function inventory()
-    {
-        return $this->belongsTo(Inventario::class);
     }
 
     public function supplier()

@@ -1,14 +1,14 @@
 @extends('layouts.panel')
-@section('title', 'Carrera')
+@section('title', 'Inventario')
 @section('content')
     <div class="row">
         <div class="col">
             <div class="card shadow">
                 <div class="card-header border-0">
                     <div class="d-flex justify-content-between align-itemd-center">
-                        <h3 class="mb-0">Carrera</h3>
+                        <h3 class="mb-0">Inventario</h3>
                         <a href="{{ route('careers.create') }}" class="btn btn-primary">
-                            <i class="fas fa-plus"></i> Nuevo Carrera
+                            <i class="fas fa-plus"></i> Nuevo Iventario
                         </a>
                     </div>
                 </div>
@@ -17,7 +17,7 @@
                     <table class="table align-items-center table-flush">
                         <thead class="thead-light">
                             <tr>
-                                <th scope="col"><i class="fas fa-list-user"></i> Nombre de la Carrera</th>
+                                <th scope="col"><i class="fas fa-list-user"></i>fecha de ingreso</th>
                                 <th scope="col"><i class="fas fa-list-user"></i> Modo de la Carrera</th>
                                 <th scope="col"><i class="fas fa-list-user"></i> Turno de la Carrera</th>
                                 <th scope="col"><i class="fas fa-list-user"></i> Código de la Carrera</th>

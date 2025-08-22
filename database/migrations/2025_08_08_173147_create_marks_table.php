@@ -13,7 +13,8 @@ return new class extends Migration
     {
         Schema::create('marks', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('mark',100);
+            $table->string('name',100);
+            $table->string('description',200);
             $table->timestamps();
         });
     }

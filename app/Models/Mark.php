@@ -11,7 +11,8 @@ class Mark extends Model
     protected $perPage = 10;
 
     protected $fillable = [
-        'Mark'
+        'name',
+        'description'
     ];
 
     public function product()

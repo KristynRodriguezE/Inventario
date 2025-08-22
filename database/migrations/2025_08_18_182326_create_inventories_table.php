@@ -13,15 +13,16 @@ return new class extends Migration
     {
         Schema::create('inventories', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('status', 40);
             $table->datetime('Entry_date');
-            $table->datetime('Departure_date');
+            $table->datetime('current_stock');
+            $table->string('minimum_stock');
             $table->datetime('Expiration_date')->nullable();
-            $table->string('current_quantity', 10);
+            $table->datetime('last update');
+
 
             $table->integer('product_id')->unsigned();
             $table->foreign('product_id')->references('id')->on('products')->onDelete('cascade')->onUpdate('cascade');
-    
+
 
             $table->timestamps();
         });

@@ -18,7 +18,10 @@ class Product extends Model
         'current_Quantity',
         'type',
         'unit_measurement',
-        'expiration_date'
+        'expiration_date',
+        'mark_id',
+        'category_id',
+        'supplier_id'
     ];
 
     public function mark()
@@ -31,6 +34,11 @@ class Product extends Model
         return $this->belongsTo(Category::class);
     }
 
+    public function supplier()
+    {
+        return $this->belongsTo(Supplier::class);
+    }
+
     public function productentry()
     {
         return $this->hasmany(ProductEntry::class);
@@ -40,4 +48,5 @@ class Product extends Model
     {
         return $this->hasmany(ProductOutput::class);
     }
+
 }

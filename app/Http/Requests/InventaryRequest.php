@@ -24,8 +24,8 @@ class InventaryRequest extends FormRequest
     {
         return [
             'entry_day' => 'required | date',
-            'departure_date' => 'required |date',
-            'expiration_date' => 'required |date',
+            'current_stock' => 'required |date',
+            'minimum_stock' => 'required |date',
             'current_quantity' => 'required|string|min:1|max:3',
 
         ];

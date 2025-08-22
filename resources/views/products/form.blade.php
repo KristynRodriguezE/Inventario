@@ -39,16 +39,29 @@
             <label for="year"> Tipo de producto </label>
             <select name="type" id="tipo_producto" class="form-control">
                 <option value="" disabled selected>Seleccione el tipo de producto</option>
-                <option value="Materiales de construccion" {{ old('type', $products->type ?? '') == 'Materiales construccion' ? 'selected' : '' }}>Materiales de Construcción</option>
-                <option value="Herramientas manuales" {{ old('type', $products->type ?? '') == 'Herramientas manuales' ? 'selected' : '' }}>Herramientas Manuales</option>
-                <option value="Herramientas electricas" {{ old('type', $products->type ?? '') == 'Herramientas electricas' ? 'selected' : '' }}>Herramientas Eléctricas</option>
-                <option value="Fontaneria" {{ old('type', $products->type ?? '') == 'Fontaneria' ? 'selected' : '' }}>Fontanería</option>
-                <option value="Electricidad" {{ old('type', $products->type ?? '') == 'Electricidad' ? 'selected' : '' }}>Material Eléctrico</option>
-                <option value="Pinturas" {{ old('type', $products->type ?? '') == 'Pinturas' ? 'selected' : '' }}>Pinturas y Accesorios</option>
-                <option value="Tornillería y Herrajes" {{ old('type', $products->type ?? '') == 'Tornillería y Herrajes' ? 'selected' : '' }}>Tornillería y Herrajes</option>
-                <option value="Jardineria" {{ old('type', $products->type ?? '') == 'Jardineria' ? 'selected' : '' }}>Jardinería</option>
-                <option value="Adhesivos" {{ old('type', $products->type ?? '') == 'Adhesivos' ? 'selected' : '' }}>Adhesivos y Selladores</option>
-                <option value="Seguridad" {{ old('type', $products->type ?? '') == 'Seguridad' ? 'selected' : '' }}>Equipo de Seguridad</option>
+                <option value="Martillos" {{ old('type', $products->type ?? '') == 'Martillos' ? 'selected' : '' }}>Martillos</option>
+                <option value="Sierras" {{ old('type', $products->type ?? '') == 'Sierras' ? 'selected' : '' }}>Sierras</option>
+                <option value="Taladros" {{ old('type', $products->type ?? '') == 'Taladros' ? 'selected' : '' }}>Taladros</option>
+                <option value="Llaves" {{ old('type', $products->type ?? '') == 'Llaves' ? 'selected' : '' }}>Llaves</option>
+                <option value="Destornilladores" {{ old('type', $products->type ?? '') == 'Destornilladores' ? 'selected' : '' }}>Destornilladores</option>
+                <option value="Pinzas" {{ old('type', $products->type ?? '') == 'Pinzas' ? 'selected' : '' }}>Pinzas</option>
+                <option value="Tubería PVC" {{ old('type', $products->type ?? '') == 'Tubería PVC' ? 'selected' : '' }}>Tubería PVC</option>
+                <option value="Tornillos" {{ old('type', $products->type ?? '') == 'Tornillos' ? 'selected' : '' }}>Tornillos</option>
+                <option value="Clavos" {{ old('type', $products->type ?? '') == 'Clavos' ? 'selected' : '' }}>Clavos</option>
+                <option value="Cemento" {{ old('type', $products->type ?? '') == 'Cemento' ? 'selected' : '' }}>Cemento</option>
+                <option value="Adhesivos" {{ old('type', $products->type ?? '') == 'Adhesivos' ? 'selected' : '' }}>Adhesivos</option>
+                <option value="Bombas de agua" {{ old('type', $products->type ?? '') == 'Bombas de agua' ? 'selected' : '' }}>Bombas de agua</option>
+                <option value="Grifos" {{ old('type', $products->type ?? '') == 'Grifos' ? 'selected' : '' }}>Grifos</option>
+                <option value="Mangueras" {{ old('type', $products->type ?? '') == 'Mangueras' ? 'selected' : '' }}>Mangueras</option>
+                <option value="Pintura" {{ old('type', $products->type ?? '') == 'Pintura' ? 'selected' : '' }}>Pintura</option>
+                <option value="Barniz" {{ old('type', $products->type ?? '') == 'Barniz' ? 'selected' : '' }}>Barniz</option>
+                <option value="Brochas" {{ old('type', $products->type ?? '') == 'Brochas' ? 'selected' : '' }}>Brochas</option>
+                <option value="Rodillos" {{ old('type', $products->type ?? '') == 'Rodillos' ? 'selected' : '' }}>Rodillos</option>
+                <option value="Solventes" {{ old('type', $products->type ?? '') == 'Solventes' ? 'selected' : '' }}>Solventes</option>
+                <option value="Cables" {{ old('type', $products->type ?? '') == 'Cables' ? 'selected' : '' }}>Cables</option>
+                <option value="Enchufes" {{ old('type', $products->type ?? '') == 'Enchufes' ? 'selected' : '' }}>Enchufes</option>
+                <option value="Interruptores" {{ old('type', $products->type ?? '') == 'Interruptores' ? 'selected' : '' }}>Interruptores</option>
+                <option value="Focos" {{ old('type', $products->type ?? '') == 'Focos' ? 'selected' : '' }}>Focos</option>
             </select>
         </div>
     </div>
